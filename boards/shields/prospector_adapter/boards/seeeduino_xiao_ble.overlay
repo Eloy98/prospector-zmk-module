@@ -49,13 +49,13 @@ disp_spi: &spi3 {
    pinctrl-0 = <&spi3_default>;
    pinctrl-1 = <&spi3_sleep>;
    pinctrl-names = "default", "sleep";
-   cs-gpios = <&gpio0 06 GPIO_ACTIVE_LOW>;
+   cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
 
    st7789: st7789v@0 {
        compatible = "sitronix,st7789v";
        spi-max-frequency = <31000000>;
        reg = <0>;
-       cmd-data-gpios = <&gpio0 08 GPIO_ACTIVE_LOW>;
+       cmd-data-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
        reset-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>
        width = <240>;
        height = <280>;
